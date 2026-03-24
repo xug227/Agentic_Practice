@@ -150,3 +150,10 @@ summary(lm1)$coefficients
 # Spending a few million dollars on new rides may not necessarily increase the overall satisfaction.
 # The model is only applicable for predictions.
 
+summary(lm1)
+summary(lm1)$r.squared
+summary(lm1)$coefficients[,c("t value")]
+
+#alternative analysis with distance as the response variable and all other scores as predictors
+lm2 <- lm(distance ~ rides + games + wait + clean, data=park)
+summary(lm2)
